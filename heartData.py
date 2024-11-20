@@ -88,7 +88,7 @@ archivo_csv = 'heart.csv'
 df = pd.read_csv(archivo_csv)
 
 # Identificar la columna categórica y las columnas numéricas
-columna_categorica = 'SEXO'  # Cambia esto por el nombre real de tu columna categórica
+columna_categorica = 'GENERO'  # Cambia esto por el nombre real de tu columna categórica
 columnas_numericas = df.select_dtypes(include='number').columns
 
 # Crear box plots para la columna categórica versus cada columna numérica
@@ -113,7 +113,7 @@ archivo_csv = 'heart.csv'
 df = pd.read_csv(archivo_csv)
 
 # Identificar la columna categórica y las columnas numéricas
-columna_categorica = 'SEXO'  # Cambia esto por el nombre real de tu columna categórica
+columna_categorica = 'GENERO'  # Cambia esto por el nombre real de tu columna categórica
 columnas_numericas = df.select_dtypes(include='number').columns
 
 # Crear scatter plots para la columna categórica versus cada columna numérica
@@ -136,7 +136,7 @@ archivo_csv = 'heart.csv'
 df = pd.read_csv(archivo_csv)
 
 # Identificar la columna categórica
-columna_categorica = 'SEXO'  # Cambia esto por el nombre real de tu columna categórica
+columna_categorica = 'GENERO'  # Cambia esto por el nombre real de tu columna categórica
 
 # Crear la tabla de frecuencias
 tabla_frecuencias = df[columna_categorica].value_counts().reset_index()
@@ -168,16 +168,16 @@ df = pd.read_csv('heart.csv')
 
 # Scatter plot: Weight vs Length1, coloreado por Species 
 plt.figure(figsize=(10, 6))
-sns.scatterplot(data=df, x='EDAD', y='ENFERMEDAD CARDIACA', hue='SEXO', palette='viridis')
+sns.scatterplot(data=df, x='EDAD', y='ENFERMEDAD CARDIACA', hue='GENERO', palette='viridis')
 plt.xlabel('Edad')
 plt.ylabel('ENFERMEDAD CARDIACA')
-plt.title('Scatter Plot of EDAD vs ENFERMEDAD CARDIACA for heart SEXO')
+plt.title('Scatter Plot of EDAD vs ENFERMEDAD CARDIACA for heart GENERO')
 plt.legend(title='Genero')
 plt.show()
 
 # Pair plot: Relaciones entre todas las variables numéricas, coloreado por Species
-sns.pairplot(df, hue='SEXO', palette='viridis')
-plt.suptitle('Pair Plot of Persona Measurements by Sexo', y=1.02)
+sns.pairplot(df, hue='GENERO', palette='viridis')
+plt.suptitle('Pair Plot of Persona Measurements by GENERO', y=1.02)
 plt.show()
 
 
